@@ -21,7 +21,12 @@ echo "Numero de letras" $quantidade_letras
 #Organiza arquivo uma palavra por linha, ignorando virgulas e outras acentuacoes atraves da varavel \w+
 
 echo "Ordenando arquivo uma palavra por linha"
+#Resumo dos comandos:
 
+     #grep, egrep — pesquisa linhas em um texto
+     #sort — ordena linhas
+     #uniq — remove/extrai/conta linhas repetidas
+     #head — mostra somente as primeiras N linhas
 
 $arquivo | egrep -o '\w+'
 
