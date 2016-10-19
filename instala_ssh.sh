@@ -17,29 +17,28 @@ cp "/etc/ssh/sshd_config" "/etc/ssh/sshd_config_bk"
 
 echo trocando a porta SSHD para 10000
 
-sudo sed -i "s/Port 22/Port 10000/g" "/etc/ssh/sshd_config"
-####Verificar " no último" 
+sudo sed -i "s/Port 22/Port 10000/g" /etc/ssh/sshd_config
 
 #Echo reiniciando o SSH 
 
-echo Reiniciando o SSH 
+echo "Reiniciando o SSH" 
 
 /etc/init.d/ssh restart 
 
 #Capturando informações para a conexão ssh 
 
-echo Digite o ip do colega 
+echo "Digite o ip do colega" 
 read nome 
-echo Digite a port 
+echo "Digite a port" 
 read port
 
 
 #Irá testar a conexão com a máquina do colega 
 
-echo Testando conexão no computador do colega 
-echo Digite o ip do colega 
+echo "Testando conexão no computador do colega" 
+echo "Digite o ip do colega" 
 read nome 
-echo Digite a port 
+echo "Digite a port" 
 read port
 
 ssh aluno@$nome -p $port
