@@ -1,0 +1,50 @@
+#!/bin/sh
+
+#Desenvolvido por Michele Pasini e Hermes 
+
+#Este script irá criar um arquivo e contar as palavra dentro do texto 
+#O arquivo de texto já deve existir, e ser apontado ao executar o script 
+
+#Armazena local do arquivo 
+
+echo "Digite o local + o nome do arquivo"
+
+read arquivo 
+
+#Conta quantas palavras tem o no texto 
+
+wc -w $arquivo 
+read quantidade_letras
+
+echo "Numero de letras" $quantidade_letras
+
+#Organiza arquivo uma palavra por linha, ignorando virgulas e outras acentuacoes atraves da varavel \w+
+
+echo "Ordenando arquivo uma palavra por linha"
+
+
+$arquivo | egrep -o '\w+'
+
+#Conta numero de vezes que a palavra se repeti atraves do uniq  
+
+echo "Exibe o numero de vezes que a palavra se repeti"
+cat $arquivo | sort | uniq -c 
+
+#Exibe o resultado classificado numericamente com o sort -n 
+
+echo "Exibe o numero de vezes que a palavra se repeti ordenando numericamente"
+cat $arquivo | sort | uniq -c | sort -n -r
+
+#Exibindo palavras que mais aparecem 
+
+echo "Palavras que mais aparecem"
+cat $arquivo | sort | uniq -c | sort -n -r | head -n 15 
+
+#Ignorando palavras com menos de tres letras 
+cat $arquivo | egrep ... | sort -f | uniq -c -i | sort -n -r | head 
+
+
+
+
+
+ 
