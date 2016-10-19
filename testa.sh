@@ -6,15 +6,19 @@
 
 #Executando o comando para verificação das propriedades do sistema operacional via ssh
 
-ssh aluno@$nome 
+#Pega o nome/ip da máquina de destino 
+
+echo "Digite o Nome ou IP da máquina de destino 
+      read nome 
 
 #Exibe se o sistema é 32/64 bits 
 echo "Verificando se o computador é 32 ou 64 bits" 
-uname -m  
+
+ ssh aluno@$nome uname -m   
 
 #Verificando detalhes do sistema 
 
 echo "Verificando os detalhes do sistema" 
 
-cat /etc/issue 
+ssh aluno@$nome cat /etc/issue 
 
