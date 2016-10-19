@@ -1,6 +1,7 @@
 #!/bin/sh
 
-#Script desenvolvido por Michele Pasini e Hermes 
+#Script desenvolvido por Michele Pasini e Hermes, Outubro de 2016
+
 #Este script irá verificar se o sistema é 32/64 bis, e irá verificar detalhes do sistema operacional 
 
 #Executando o comando para verificação das propriedades do sistema operacional via ssh
