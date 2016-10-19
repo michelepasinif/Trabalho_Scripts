@@ -2,9 +2,12 @@
 
 #Desenvolvido por Michele França e Hermes, Outubro de 2016
 
-#Este script irá instalar o SSH-Server, alterar a porta e testar uma conexão para outra máquina 
+#Este script irá instalar o SSH-Server, alterar a porta e testar uma conexão para outra máquina
 
-#Instalando o Openssh-server 
+#Para instalar o SSH e modificar a porta, é necessário que o script seja executado como super usuário (sudo)
+
+#Instalando o Openssh-server
+
 
 apt-get install openssh-server
 
