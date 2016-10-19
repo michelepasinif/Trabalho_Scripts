@@ -33,23 +33,17 @@ $arquivo | egrep -o '\w+'
 #Conta numero de vezes que a palavra se repeti atraves do uniq  
 
 echo "Exibe o numero de vezes que a palavra se repeti"
-cat $arquivo | sort | uniq -c 
+cat $arquivo | egrep -o '\w+' | sort | uniq -c 
 
 #Exibe o resultado classificado numericamente com o sort -n 
 
 echo "Exibe o numero de vezes que a palavra se repeti ordenando numericamente"
-cat $arquivo | sort | uniq -c | sort -n -r
+cat $arquivo | egrep -o '\w+' | sort | uniq -c | sort -n -r
 
 #Exibindo palavras que mais aparecem 
 
 echo "Palavras que mais aparecem"
-cat $arquivo | sort | uniq -c | sort -n -r | head -n 15 
+cat $arquivo | egrep -o '\w+' | sort | uniq -c | sort -n -r | head -n 15 
 
 #Ignorando palavras com menos de tres letras 
-cat $arquivo | egrep ... | sort -f | uniq -c -i | sort -n -r | head 
-
-
-
-
-
- 
+cat $arquivo | egrep -o '\w+' | egrep ... | sort -f | uniq -c -i | sort -n -r | head 
