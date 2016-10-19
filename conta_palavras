@@ -1,6 +1,6 @@
 #!/bin/sh
 
-#Desenvolvido por Michele Pasini e Hermes 
+#Desenvolvido por Michele Pasini e Hermes, Outubro de 2016
 
 #Este script irá criar um arquivo e contar as palavra dentro do texto 
 #O arquivo de texto já deve existir, e ser apontado ao executar o script 
